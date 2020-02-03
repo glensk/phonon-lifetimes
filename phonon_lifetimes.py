@@ -38,8 +38,8 @@ def create_READMEtxt(directory=False,add=False):
         directory = os.getcwd()
     # get sha
     pwd = os.getcwd()
-    os.chdir(os.environ['scripts'])
-    sha = check_output(["git","rev-parse","master"]).decode('utf-8')
+    #os.chdir(os.environ['scripts'])
+    #sha = check_output(["git","rev-parse","master"]).decode('utf-8')
     os.chdir(pwd)
 
     # get time
@@ -53,8 +53,8 @@ def create_READMEtxt(directory=False,add=False):
     with open(filepath, "w") as text_file:
         text_file.write("# using https://github.com/glensk/dotfiles/trunk/scripts\n")
         text_file.write("# to download it: svn checkout https://github.com/glensk/dotfiles/trunk/scripts\n")
-        text_file.write("# used sha: "+sha) #+"\n")
-        text_file.write("# execution time: "+str(time.time() - start_time)+" seconds.")
+        #text_file.write("# used sha: "+sha) #+"\n")
+        #text_file.write("# execution time: "+str(time.time() - start_time)+" seconds.")
         text_file.write("\n")
         if add:
             print('add')
@@ -7182,26 +7182,31 @@ def get_mdstepstocalc(space_fft=False): #, args = False):
             print(steps_tocheck_md_error,type(steps_tocheck_md_error))
         for idx,i in enumerate((np.arange(10)+1)[::-1]):
             add = int(steps_tocheck_md_error*10 - i*steps_tocheck_md_error)
-            #print "add:",add,type(add)
+            print("add:",add,type(add))
             mdstepstocalc_all[i]=int(add)
             #np.append(mdstepstocalc_all,add)
         mdstepstocalc_all = np.trim_zeros(mdstepstocalc_all)
+        print('mdstepstocalc_all 0',mdstepstocalc_all)
 
         # appendlast:
         # das /10*10 macht aus 20000{1,9} 200000  aber aus 200010 macht es 200010
+        print('sf',space_fft.shape)
+        print('sf',space_fft.shape[1]/10*10)
         mdstepstocalc_all = np.sort(np.append(mdstepstocalc_all,[space_fft.shape[1]/10*10]))
-
+        print('mdstepstocalc_all 1',mdstepstocalc_all)
         #####################################################
         # MDSTEPSTOCALC schoenheitskorrekturen der zahlen
         #####################################################
         if verb:
             print("mdstepstocalc_all:",mdstepstocalc_all)
         mdstepstocalc_all = np.sort(np.unique(mdstepstocalc_all[np.where(mdstepstocalc_all <= space_fft.shape[1])[0]]))
+        print('mdstepstocalc_all 2',mdstepstocalc_all)
 
         if verb:
             print("mdstepstocalc_all:",mdstepstocalc_all)
         #if type(mdstepstocalc) == bool:
         mdstepstocalc = mdstepstocalc_all
+        print('mdstepstocalc     2',mdstepstocalc)
         if verb:
             print("mdstepstocalc (in the function 1):",mdstepstocalc,type(mdstepstocalc))
 
@@ -7223,6 +7228,10 @@ def get_mdstepstocalc(space_fft=False): #, args = False):
         mdstepstocalc[-1]=mdstepsmax
         mdstepstocalc = mdstepstocalc[np.where(mdstepstocalc > 999)[0]]
         mdstepstocalc_all = mdstepstocalc_all[np.where(mdstepstocalc_all > 999)[0]]
+        print('mdstepstocalc_all 3',mdstepstocalc_all)
+        print('mdstepstocalc     3',mdstepstocalc)
+        print('faktor',faktor)
+        print('mdstepstocalc',mdstepstocalc)
         if mdstepstocalc_all[0] >= 20000:
             mdstepstocalc_all = np.insert(mdstepstocalc_all,0,10000)
         if mdstepstocalc_all[0] >= 10000:

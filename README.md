@@ -16,7 +16,7 @@ tar -xf POSITIONs.tar.bzip2
 
 
 __where__:  
- * python phonon-lifetimes.py -h to see explanation of available optionns 
+ * python phonon-lifetimes.py -h (explanation of available options)
  * sc defines the supercell
  * atoms defines the number of atoms in the cell
  * dt is the timestep in fs
@@ -24,8 +24,7 @@ __where__:
  * ...
 
 
-plot corresponding powerspectra e.g. using xmgrace:  
-xmgrace ps_smooth/ps_space_fft_1_1_1_12042.dat
+Plot corresponding powerspectra e.g. example_TiN/ps_smooth/ps_space_fft_1_1_1_12042.dat
 
 ![picture alt](example_TiN/images/ps_space_fft_1_1_1_12042.png "TiN [1 1 1]")
 

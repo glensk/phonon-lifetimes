@@ -17,7 +17,9 @@ tar -xf POSITIONs.tar.bzip2
 <!-- from
 /Users/glensk/Dropbox/Albert/proj/proj_current/__2017.01_phonon_linewidth_al/check_62_LA_POSITIONs/generate_positios/6x6x6sc
 --> 
-
+<!--
+/Users/glensk/Dropbox/Albert/proj/proj_current/__2017.03_irina_anharmonic/17_06_06_phonon_lifetimes_TiN/lifetimes_both_new_333_300K
+-->
 
 __where__:  
  * python phonon-lifetimes.py -h (explanation of available options)

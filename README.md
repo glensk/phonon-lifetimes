@@ -26,5 +26,9 @@ __where__:
 see other options:  
 python phonon-lifetimes.py -h 
 
-<!-- ![picture alt](/images/bayer_GD200.png "Bayer chart") -->
+
+plot corresponding powerspectra e.g. using xmgrace:  
+xmgrace ps_smooth/ps_space_fft_1_1_1_12042.dat
+
+![picture alt](example_TiN/images/ps_space_fft_1_1_1_12042.png "TiN [1 1 1]")
 

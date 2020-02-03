@@ -11,20 +11,17 @@ git clone https://github.com/glensk/phonon-lifetimes
 
 __How to use by example:__  
 cd example_TiN  
-tar -xf POSITIONs.tar.bzip2
+tar -xf POSITIONs.tar.bzip2  
 ../phonon-lifetimes/phonon_lifetimes.py -fftpy -atoms 216 -ps -v --peaks 2 -dt 1 -sc 3 -a 4.24 -pd -write_ps_fitted -write_full_ps -write_smooth_in
 
 
 __where__:  
+ * python phonon-lifetimes.py -h to see explanation of available optionns 
  * sc defines the supercell
  * atoms defines the number of atoms in the cell
  * dt is the timestep in fs
  * a is the lattice constant
  * ...
-
-
-see other options:  
-python phonon-lifetimes.py -h 
 
 
 plot corresponding powerspectra e.g. using xmgrace:  

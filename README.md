@@ -21,7 +21,7 @@ tar -xf POSITIONs.tar.bzip2
 /Users/glensk/Dropbox/Albert/proj/proj_current/__2017.03_irina_anharmonic/17_06_06_phonon_lifetimes_TiN/lifetimes_both_new_333_300K
 -->
 
-__Help__:
+__Help:__
  * python phonon-lifetimes.py -h (explanation of available options)
  * sc: defines the supercell
  * atoms: defines the number of atoms in the cell

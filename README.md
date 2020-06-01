@@ -1,6 +1,6 @@
 # phonon-lifetimes.py
 
-A simple (cluttered) python script to compute phonon power-spectra, 
+A simple python script to compute phonon power-spectra, 
 frequencies and phonon-lifetimes from atomic positions as, e.g.,
 obtain by molecular dynamics (for cubic cells). The accompanying paper can be found following the following link
 https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.123.235501

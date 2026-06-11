@@ -1,0 +1,3 @@
+# Claude Code session log (JSONL). Auto-maintained by auto-commit hook.
+# View: crr (claude-resume-repo.py) from repo root — interactive picker to resume sessions.
+{"session_id":"3035caf1-e9b0-4ec6-91f4-0ec3c00278be","slug":"i-have-a-lot-reflective-tide","title":"","summary":"revert: undo unintended auto-reformat of phonon_lifetimes.py; keep only ","last_activity":"2026-06-11T13:14:59Z","files_modified":["phonon_lifetimes.py"],"turn_count":1}
